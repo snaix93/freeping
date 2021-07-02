@@ -1,0 +1,14 @@
+[Unit]
+Description=Runs and keeps alive the Freeping.io artisan horizon process
+OnFailure=failure-notify@.service
+
+[Service]
+User=www-data
+Group=www-data
+Restart=always
+WorkingDirectory=/var/www/freeping.io
+ExecStart=/usr/bin/php artisan horizon
+ExecReload=/usr/bin/php artisan horizon:terminate
+
+[Install]
+WantedBy=multi-user.target

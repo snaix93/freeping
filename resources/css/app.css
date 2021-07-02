@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tippy-box {
+    @apply break-all;
+}
+
+@layer base {
+    [x-cloak] {
+        display: none !important;
+    }
+}
+
+@layer utilities {
+    .p-gutter {
+        @apply p-4 sm:p-6;
+    }
+
+    .p-gutter-x {
+        @apply px-4 sm:px-6;
+    }
+
+    .p-gutter-y {
+        @apply py-4 sm:py-6;
+    }
+
+    .p-gutter-l {
+        @apply pl-4 sm:pl-6;
+    }
+
+    .p-gutter-r {
+        @apply pr-4 sm:pr-6;
+    }
+
+    .p-gutter-t {
+        @apply pt-4 sm:pt-6;
+    }
+
+    .p-gutter-b {
+        @apply pb-4 sm:pb-6;
+    }
+
+    @variants responsive {
+        .bg-gradient-hard {
+            --tw-gradient-stops: var(--tw-gradient-from) 50%, var(--tw-gradient-to, rgba(43, 151, 211, 0)) 50%;
+        }
+    }
+}
+
+

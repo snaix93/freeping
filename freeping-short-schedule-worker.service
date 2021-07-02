@@ -1,0 +1,13 @@
+[Unit]
+Description=Runs and keeps alive the Freeping.io artisan short-schedule:run process
+OnFailure=failure-notify@.service
+
+[Service]
+User=www-data
+Group=www-data
+Restart=always
+WorkingDirectory=/var/www/freeping.io
+ExecStart=/usr/bin/php artisan short-schedule:run
+
+[Install]
+WantedBy=multi-user.target
